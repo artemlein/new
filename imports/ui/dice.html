@@ -1,0 +1,93 @@
+
+<template name="cube">
+
+  <p>Баланс игрока : {{#each users}} {{money}} RUB{{/each}}</p>
+  
+  <div id="background"></div>
+  <div id="wrapper">
+  
+    <p id="point">0</p>
+    <button id="play">Play</button>
+    <div id="platform">
+      <div id="dice">
+        <div class="side front">
+          <div class="dot center"></div>
+        </div>
+        <div class="side front inner"></div>
+        <div class="side top">
+          <div class="dot dtop dleft"></div>
+          <div class="dot dbottom dright"></div>
+        </div>
+        <div class="side top inner"></div>
+        <div class="side right">
+          <div class="dot dtop dleft"></div>
+          <div class="dot center"></div>
+          <div class="dot dbottom dright"></div>
+        </div>
+        <div class="side right inner"></div>
+        <div class="side left">
+          <div class="dot dtop dleft"></div>
+          <div class="dot dtop dright"></div>
+          <div class="dot dbottom dleft"></div>
+          <div class="dot dbottom dright"></div>
+        </div>
+        <div class="side left inner"></div>
+        <div class="side bottom">
+          <div class="dot center"></div>
+          <div class="dot dtop dleft"></div>
+          <div class="dot dtop dright"></div>
+          <div class="dot dbottom dleft"></div>
+          <div class="dot dbottom dright"></div>
+        </div>
+        <div class="side bottom inner"></div>
+        <div class="side back">
+          <div class="dot dtop dleft"></div>
+          <div class="dot dtop dright"></div>
+          <div class="dot dbottom dleft"></div>
+          <div class="dot dbottom dright"></div>
+          <div class="dot center dleft"></div>
+          <div class="dot center dright"></div>
+        </div>
+        <div class="side back inner"></div>
+        <div class="side cover x"></div>
+        <div class="side cover y"></div>
+        <div class="side cover z"></div>
+      </div>
+    </div>
+</div>
+</template>
+
+<template name="user">
+  <button class="addBalance">Добавить 500</button>
+  <FORM class="countMoney">
+    <input type="number"  min="0" name="count" placeholder="Ваша ставка">
+  </FORM>
+  <button value="1" class="one">1</button>
+  <button value="2" class="two">2</button>
+  <button value="3" class="three">3</button>
+  <button value="4" class="for">4</button>
+  <button value="5" class="five">5</button>
+  <button value="6" class="six">6</button>
+</template>
+
+
+<!-- <template name="vk">
+  <div id="vk_auth">asd</div>
+  <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+  <script type="text/javascript"> 
+  VK.init(function() { 
+     // API initialization succeeded 
+     // Your code here 
+     console.log("ne pidor Vk");
+  }, function() { 
+     // API initialization failed 
+     // Can reload page here 
+     console.log("pidor Vk");
+}, '5.92'); 
+</script>
+   
+      <script type="text/javascript">
+      VK.Widgets.Auth("vk_auth", {width: "300px", authUrl: '/vklogin.php?'});
+      </script>
+  
+</template> -->
